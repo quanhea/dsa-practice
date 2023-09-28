@@ -30,6 +30,8 @@ class CombinationsFinder<T> {
   }
 }
 
+export default CombinationsFinder;
+
 let finder = new CombinationsFinder([1, 2, 3, 4, 5], 3);
 let combinations = finder.findCombinations();
 console.log(combinations);
