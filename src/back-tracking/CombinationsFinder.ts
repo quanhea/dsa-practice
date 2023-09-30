@@ -9,7 +9,7 @@ class CombinationsFinder<T> {
     this.k = k;
   }
 
-  public findCombinations(): Array<Array<T>> {
+  public calc(): Array<Array<T>> {
     this.exec(0);
     return this.result;
   }
@@ -32,6 +32,6 @@ class CombinationsFinder<T> {
 
 export default CombinationsFinder;
 
-let finder = new CombinationsFinder([1, 2, 3, 4, 5], 3);
-let combinations = finder.findCombinations();
-console.log(combinations);
+let instance = new CombinationsFinder([1, 2, 3, 4, 5], 3);
+let result = instance.calc();
+console.log(result);

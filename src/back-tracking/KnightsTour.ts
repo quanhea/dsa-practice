@@ -16,7 +16,7 @@ class KnightsTour<T> {
     this.traveled = Array.from({ length: n }, () => Array(n).fill(false));
   }
 
-  public findPath(): Array<Array<number>> {
+  public calc(): Array<Array<number>> {
     this.exec(this.i, this.j);
     return this.result;
   }
@@ -49,6 +49,6 @@ class KnightsTour<T> {
 
 export default KnightsTour;
 
-let knightsTour = new KnightsTour(3, 3, 5);
-let path = knightsTour.findPath();
-console.log(path);
+let instance = new KnightsTour(3, 3, 5);
+let result = instance.calc();
+console.log(result);

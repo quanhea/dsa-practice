@@ -8,7 +8,7 @@ class PermutationsFinder<T> {
     this.set = set;
   }
 
-  public findPermutations(): Array<Array<T>> {
+  public calc(): Array<Array<T>> {
     this.exec(0);
     return this.result;
   }
@@ -31,6 +31,6 @@ class PermutationsFinder<T> {
 
 export default PermutationsFinder;
 
-let finder = new PermutationsFinder([1, 2, 3, 4, 5]);
-let permutations = finder.findPermutations();
-console.log(permutations);
+let instance = new PermutationsFinder([1, 2, 3, 4, 5]);
+let result = instance.calc();
+console.log(result);
